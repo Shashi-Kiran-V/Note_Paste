@@ -33,7 +33,7 @@ const Home = () => {
        type="text"
        placeholder="enter title here"
       value={title}
-      onChange={(e)=>setTitle(e.target.title)}
+      onChange={(e)=>setTitle(e.target.value)}
       />
       <button onClick={createPaste}>
         {
