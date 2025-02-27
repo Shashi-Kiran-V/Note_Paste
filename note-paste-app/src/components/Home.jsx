@@ -48,7 +48,7 @@ const Home = () => {
       value={title}
       onChange={(e)=>setTitle(e.target.value)}
       />
-      <button onClick={createPaste}>
+      <button onClick={createPaste} className='p-2 rounded-2xl mt-2'>
         {
           pasteId ? "Update Paste" : "Create my Paste"
         }
