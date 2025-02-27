@@ -12,7 +12,7 @@ const ViewPaste = () => {
     <div>
       <div className='flex flex-row gap-7 place-content-between'>
       <input 
-      className='p-2 rounded-2xl mt-2 w-[66%] pl-4'
+      className='p-2 rounded-2xl mt-2 w-[66%] pl-4 border border-gray-300'
        type="text"
        placeholder="enter title here"
       value={paste.title}
@@ -28,7 +28,7 @@ const ViewPaste = () => {
     </div>
     <div className='mt-8'>
       <textarea 
-      className="rounded-2xl mt-4, min-w-[500px] p-4 border-color: var(--color-cyan-800);"
+      className="rounded-2xl mt-4, min-w-[500px] p-4 border border-gray-300"
         value={paste.content}
         placeholder="enter content here"
         disabled
