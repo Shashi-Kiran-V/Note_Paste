@@ -38,10 +38,16 @@ function handleDelete(pasteId){
                     </div> 
                     <div className='flex flex-row gap-4 place-content-evenly'>
                       <button>
-                        Edit
+                        <a href={`/pastes/${paste?._id}`}>
+                            View
+                        </a>
                       </button>
                       <button>
-                        View
+
+                        <a href={`/?pasteId=${paste?._id}`}>
+                            Edit
+                        </a>
+                        
                       </button>
                       <button onClick={()=>handleDelete(paste?._id)}>
                         Delete
