@@ -12,6 +12,21 @@ const Paste = () => {
 function handleDelete(pasteId){
   dispatch(removeFromPastes(pasteId))
 }
+const handleShare = (pasteId) => {
+  const shareableLink = `${window.location.origin}/pastes/${pasteId}`;
+  navigator.clipboard.writeText(shareableLink)
+    .then(() => {
+      toast.success("Link copied to clipboard!");
+    })
+    .catch(() => {
+      toast.error("Failed to copy link.");
+    });
+}
+const formatDate = (date) => {
+  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  const formattedDate = new Date(date).toLocaleDateString('en-GB', options);
+  return formattedDate;
+}
   
   return (
     <div>
@@ -58,13 +73,11 @@ function handleDelete(pasteId){
                       }}>
                         Copy
                       </button>
-                      <button>
+                      <button onClick={() => handleShare(paste?._id)}>
                         Share
                       </button>
                       </div>
-                      <div>
-                        {paste.createdAt}
-                        </div>
+                      <div>{formatDate(paste.createdAt)}</div>
                   </div>
               )
 
