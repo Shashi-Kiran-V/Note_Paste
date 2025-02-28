@@ -23,7 +23,7 @@ Note-Paste is a React-based web application that allows users to create, view, u
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/note-paste.git
+   git clone https://github.com/Shashi-Kiran-V/note-paste.git
    cd note-paste
    ```
 2. Install dependencies:
